@@ -96,6 +96,20 @@ async function getPrediction() {
 
         if (data.predictions) {
 
+            document.querySelector(".content-box").innerHTML = `
+            
+            <h2 style="color: #fff; font-weight: bold;"> <strong style="color: #3EBDFF">Qual</strong> é esse <strong style="color: #3EBDFF">time</strong>? </h2>
+
+            <div class="input-box">
+    
+                <h3 class="input-title"> Insira a URL da imagem </h3>
+                <input type="url" class="input-url" id='url'>
+                <button class="input-button" onclick="getPrediction()"> Enviar </button>
+    
+            </div>
+
+            `
+
             console.log(data.predictions)
             data.predictions.map(predict => {
 
@@ -106,7 +120,7 @@ async function getPrediction() {
                 tag.innerText = predict.tagName
 
                 let percent = document.createElement('h4')
-                percent.innerText = Math.floor(parseFloat(`${predict.probability}`.slice(0, 4)) * 100) + "%"
+                percent.innerText = Math.floor(parseFloat(`${predict.probability}`.slice(0, 4)) * 100) > 100? "0%": Math.floor(parseFloat(`${predict.probability}`.slice(0, 4)) * 100)+"%"
 
                 div.appendChild(tag)
                 div.appendChild(percent)
