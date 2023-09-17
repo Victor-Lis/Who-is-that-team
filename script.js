@@ -110,7 +110,7 @@ async function getPrediction() {
 
             `
 
-            console.log(data.predictions)
+            // console.log(data.predictions)
             data.predictions.map(predict => {
 
                 let div = document.createElement("div")
