@@ -10,7 +10,13 @@
 
 </head>
 <body>
-    
+
+    <nav>
+
+        <h3 id="nav-URL" onclick="setPage('URL')" style="color: #297ca9"> URL </h3>
+        <h3 id="nav-Upload" onclick="setPage('Upload')"> Upload Image </h3>
+
+    </nav>
     <main class="content-box">
 
         <h2 style="color: #fff; font-weight: bold;"> <strong style="color: #3EBDFF">Qual</strong> é esse <strong style="color: #3EBDFF">time</strong>? </h2>
@@ -18,7 +24,8 @@
         <div class="input-box">
 
             <h3 class="input-title"> Insira a URL da imagem </h3>
-            <input type="url" id="url" class="input-url">
+            <input type="url" id="url" class="input-url" onchange="setImg()">
+            <img src="" id="img" style="width: 100%; border-radius: 10px; margin: 05px 0;">
             <button class="input-button" onclick="getPrediction()"> Enviar </button>
 
         </div>

@@ -17,13 +17,30 @@ body{
     /* flex-wrap: wrap; */
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
+
+}
+
+nav{
+
+    width: 100%;
+    display: flex;  
+    align-items: center;
     justify-content: center;
+    height: 60px;
+
+    > h3{
+
+        margin: 0px 15px;
+
+    }
 
 }
 
 .content-box{
 
-    width: 70%;
+    width: calc(70% - 60px);
+    min-width: 250px;
     max-width: 350px;
     /* margin: 2% 25%; */
     min-height: 125px;
@@ -37,6 +54,8 @@ body{
     border-radius: 20px;
     padding: 10px 5px;
     overflow-y: auto;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
 
 }
 
@@ -62,6 +81,13 @@ body{
 
     padding: 5px 10px;
     border-radius: 5px;
+    color: #3EBDFF;
+
+    &:hover{
+
+        cursor: pointer;
+
+    }
 
 }
 
@@ -101,5 +127,19 @@ body{
 .input-url:invalid{
 
     color: red;
+
+}
+
+nav{
+
+    color: #3EBDFF;
+
+    > h3:hover{
+
+        cursor: pointer;
+        opacity: 0.75;
+        filter: drop-shadow(1px 1px 0px #fff)
+
+    }
 
 }
