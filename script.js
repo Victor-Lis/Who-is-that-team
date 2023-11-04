@@ -1,4 +1,5 @@
 const url = `https://api.imgur.com/3/image`;
+
 const urlCustomVisionAI = `https://eastus2.api.cognitive.microsoft.com/customvision/v3.0/Prediction/296b68b1-0da2-4455-92f7-3ddcb30ab0f1/classify/iterations/Iteration5/url`
 const predictionKey = '28dba1f169e444de817ef3a80b136773'
 const apiKey = "2df1400f224783a";
