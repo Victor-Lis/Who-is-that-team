@@ -24,18 +24,14 @@ Por final aprendi algumas coisas interessantes como:
 let data = await fetch(
     urlCustomVisionAI,
     {
-
         method: "POST",
         headers: {
             "Prediction-Key": predictionKey,
             "Content-Type": "application/json",
         },
         body: JSON.stringify({
-
             url,
-
         }),
-
     }
 )
 ```
