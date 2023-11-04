@@ -49,7 +49,7 @@ const formData = new FormData();
 formData.append("image", document.querySelector("#image").files[0]);
 ```
 
-#### Trabalhar com FormDataXMLHttpRequest()
+#### Trabalhar com XMLHttpRequest()
 Também nunca havia trabalhado com FormDataXMLHttpRequest(), então foi minha primeira vez.
 
 ```javascript
