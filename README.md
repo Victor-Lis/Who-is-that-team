@@ -1,8 +1,67 @@
-# Who-is-that-team
 
-Este é um projeto simples que usufrui dos conhecimentos adquiridos na plataforma Microsoft Learn, junto aos conhecimentos que estou adquirindo no meu curso do Senai.
+# Who's that team?
 
-Falando um pouco do projeto, dentro do projeto é possível upar uma imagem da web (via URL) ou do próprio aparelho (via galeria ou foto tirada na hora),
-após isso, dadas as caracteristicas da imagem a IA retornará uma previsão tentando adivinhar o time referente a imagem (até o momento tem apenas 5 times,
-os 4 grandes de SP, sendo eles Palmeiras, Corinthians, Santos, São Paulo e o Flamengo), a IA tentará relacionar a imagem a um time, sendo assim ela pode tentar advinhar
-o time de uma pessoa na imagem, ou relacionar um cenário com um time.
+Esse é o meu primeiro projeto utilizando a API da Azure ML, plataforma na qual tive a oportunidade de aprender um pouco sobre IAs.
+
+
+
+## Desafios
+
+Acredito que meus principais desafios nesse projeto foram envolvendo envio e recebimento de dados da web.
+
+
+
+
+## Aprendizados
+
+Por final aprendi algumas coisas interessantes como: 
+
+
+
+#### Fazer uma requisição HTTP usando fetch com um método != de GET
+
+```javascript
+let data = await fetch(
+    urlCustomVisionAI,
+    {
+
+        method: "POST",
+        headers: {
+            "Prediction-Key": predictionKey,
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+
+            url,
+
+        }),
+
+    }
+)
+```
+
+#### Trabalhar com FormData()
+Nunca havia trabalhado com dados no formato FormData(), foi minha primeira vez nesse projeto.
+
+
+```javascript
+const formData = new FormData();
+formData.append("image", document.querySelector("#image").files[0]);
+```
+
+#### Trabalhar com FormDataXMLHttpRequest()
+Também nunca havia trabalhado com FormDataXMLHttpRequest(), então foi minha primeira vez.
+
+```javascript
+const xhr = new XMLHttpRequest();
+
+xhr.open("POST", url);
+xhr.setRequestHeader("Authorization", `Client-ID ${apiKey}`);
+xhr.send(formData);
+
+xhr.onload = async function () {...}
+```
+## Autores
+
+- [@Victor-Lis](https://github.com/Victor-Lis)
+
